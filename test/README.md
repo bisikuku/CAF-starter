@@ -1,0 +1,11 @@
+rover \
+  --impersonate-sp-from-keyvault-url https://mond-kv-co-fwu.vault.azure.net/ \
+  -var-folder /tf/caf/test \
+  -tfstate_subscription_id 8db012f5-4932-4c17-8293-26e955ca881b \
+  -target_subscription 8db012f5-4932-4c17-8293-26e955ca881b \
+  -tfstate connectivity_private_dns_prod.tfstate \
+  -env mondoso-env \
+  -level level2 \
+  -w tfstate \
+  -p ${TF_DATA_DIR}/connectivity_private_dns_prod.tfstate.tfplan \
+  -a plan
